@@ -40,6 +40,9 @@
 
     ];
 
+    if($_GET['parcheggi'] == true){
+        echo"ricevuto";
+    }
 
     ?>
 
@@ -63,7 +66,7 @@
 <?php
 
 
-      /* foreach($hotels  as $currentHotel){
+       /*foreach($hotels  as $currentHotel){
 
         foreach($currentHotel as $key => $value){
 
@@ -92,7 +95,6 @@ foreach($hotels as $currentHotel){
 ?>
 
 </table>
-
 
 </div>
 
