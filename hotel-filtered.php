@@ -40,9 +40,31 @@
 
     ];
 
-    if($_GET['parcheggi'] == true){
+   /* if($_GET['parcheggi'] == true){
         echo"ricevuto";
-    }
+
+
+            }*/
+
+            array_filter($hotels, function(){
+        
+
+                });
+
+
+                foreach($hotels  as $currentHotel){
+
+                    if( $currentHotel['parking'] == 1){
+                        echo $currentHotel['name'];
+                    }
+                
+                    }
+
+                
+
+
+        
+
 
     ?>
 
