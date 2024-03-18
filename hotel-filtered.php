@@ -46,26 +46,6 @@
 
             }*/
 
-            array_filter($hotels, function(){
-        
-
-                });
-
-
-                foreach($hotels  as $currentHotel){
-
-                    if( $currentHotel['parking'] == 1){
-                        echo $currentHotel['name'];
-                    }
-                
-                    }
-
-                
-
-
-        
-
-
     ?>
 
 
@@ -107,7 +87,15 @@ foreach($hotels as $currentHotel){
     <tr>
             ";
       foreach($currentHotel as $key => $value){
-             echo "<td>$value</td>";
+
+       
+
+            if( $currentHotel['parking'] == 1){
+                
+                echo "<td>$value</td>";
+            }
+        
+            
       }
       echo "
       </tr>
