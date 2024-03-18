@@ -54,7 +54,18 @@
      
 <?php
 foreach($hotels as $currentHotel){
-      echo"yes";
+    echo "
+    <li>
+        <ul>
+            ";
+      foreach($currentHotel as $key => $value){
+             echo "<li>$key : $value</li>";
+      }
+      echo "
+      </ul>
+      
+  </li>
+  ";
 }
 
 
