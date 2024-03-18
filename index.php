@@ -62,16 +62,21 @@
 <thead>
 <tr>   
 <?php
-
-
-      /* foreach($hotels  as $currentHotel){
-
-        foreach($currentHotel as $key => $value){
-
-             echo "<th> $key </th>";
-
-        }
-      }*/
+/* qui popolo dinamicamente la heaad della mia tabella usando la funzione "array_keys"*/
+$hotelProp = array_keys( $hotels[0]);
+echo "
+<tr>
+"; 
+foreach ( $hotelProp as $prop ) {
+    echo "
+      <th>
+      $prop
+      </th>
+    ";
+}
+echo "
+</tr>
+";
 
 ?>
 <tr>
