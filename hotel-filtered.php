@@ -128,9 +128,36 @@ elseif($_GET['stelle'] > 0){
       ";
     }
 
+}
+
+/* parte che controlla che entrambe le condizioni siano contemporaneamente verificate (ovverp che ci siano parcheggi e che il numero di stellle abbia il valore scelto.) */
+elseif($_GET['stelle'] > 0 && $_GET['parcheggi'] == true){
+
+    foreach($hotels as $currentHotel){
+        echo "
+        <tbody>
+        <tr>
+                ";
+          foreach($currentHotel as $key => $value){
+    
+           
+    
+                if( $currentHotel['vote'] >= $_GET['stelle'] && $currentHotel['parking'] == 1   ){
+                    
+                    echo "<td>$value</td>";
+                }
+            
+                
+          }
+          echo "
+          </tr>
+      </tbody> 
+      ";
+    }
 
 }
-/* quello che succede se non vongono selezionate ne l'opzione stelle ne parcheggi*/
+
+/* mi stampa la tabella originale se non vongono selezionate ne l'opzione stelle ne parcheggi ne tutti e due contemporaneamente*/
  else{
     foreach($hotels as $currentHotel){
         echo "
