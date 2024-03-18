@@ -38,7 +38,7 @@
             'distance_to_center' => 50
         ],
 
-    ];
+    ]
 
     ?>
 
@@ -51,6 +51,16 @@
     <title>php-hotel</title>
 </head>
 <body>
-    <h1>file</h1>
+     
+<?php
+foreach($hotels as $currentHotel){
+      echo"yes";
+}
+
+
+
+?>
+
+
 </body>
 </html>
