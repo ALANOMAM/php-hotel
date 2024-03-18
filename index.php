@@ -57,23 +57,23 @@
 <div class="container">
 
 <table class="table">
-
+<thead>
+<tr>   
 <?php
-foreach($hotels as $currentHotel){
-    echo "
-    <thead>
-    <tr>
-            ";
-      foreach($currentHotel as $key => $value){
-             echo "<th>$key</th>";
-      }
-      echo "
-      </tr>
-  </thead> 
-  ";
-}
-?>
 
+
+      /* foreach($hotels  as $currentHotel){
+
+        foreach($currentHotel as $key => $value){
+
+             echo "<th> $key </th>";
+
+        }
+      }*/
+
+?>
+<tr>
+<thead>
 <?php
 foreach($hotels as $currentHotel){
     echo "
