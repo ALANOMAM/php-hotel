@@ -18,6 +18,11 @@
     Hotel con parcheggio
   </label>
 </div>
+
+<div>
+<input type="number"  name="stelle"  placeholder="select a number">
+</div>
+
 <input type="submit">
 </form>
 

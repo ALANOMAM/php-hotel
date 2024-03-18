@@ -1,5 +1,6 @@
 <?php
 
+/*qui sono presenti tutti gli alberghi a prescindere*/
     $hotels = [
 
         [

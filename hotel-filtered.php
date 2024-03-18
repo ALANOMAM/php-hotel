@@ -1,5 +1,5 @@
 <?php
-
+/*qui sono presenti tutti gli alberghi con parcheggi o senza parcheggi in base a quello che seleziono in form*/
     $hotels = [
 
         [
@@ -76,6 +76,7 @@
 <tr>
 <thead>
 <?php
+/* parte che controlla i parcheggi */
  if($_GET['parcheggi'] == true){
 
 foreach($hotels as $currentHotel){
@@ -102,6 +103,34 @@ foreach($hotels as $currentHotel){
 
 } 
 
+/* parte che controlla le stelle */
+elseif($_GET['stelle'] > 0){
+
+    foreach($hotels as $currentHotel){
+        echo "
+        <tbody>
+        <tr>
+                ";
+          foreach($currentHotel as $key => $value){
+    
+           
+    
+                if( $currentHotel['vote'] >= $_GET['stelle']   ){
+                    
+                    echo "<td>$value</td>";
+                }
+            
+                
+          }
+          echo "
+          </tr>
+      </tbody> 
+      ";
+    }
+
+
+}
+/* quello che succede se non vongono selezionate ne l'opzione stelle ne parcheggi*/
  else{
     foreach($hotels as $currentHotel){
         echo "
